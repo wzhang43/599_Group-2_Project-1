@@ -1,0 +1,64 @@
+Date: April 7, 2014
+
+Location: In Class
+Present: Wanli, Matt
+Absent: Adam
+
+Role assignment:
+Matt: Recorder & Checker
+Wanli: Coordinator
+Adam: Monitor
+
+Tasks:
+Group Contract, Due Weds Apr 9 (hardcopy)
+At least 3 questions, Due Weds Apr 9 (discussion, no turn in)
+Create Git Repository and add users
+
+Item 1: Group Contract Ideas
+Matt & Wanli suggested items to include on the group contract. No finalization decisions were made.
+
+"We commit to a timely response to e-mail discussions, < 24 hours."
+"I will commit to timely progress on individual tasks, and will inform the group if that is not possible, or difficulty arises."
+"I will show up to meetings on time, and will contact the group if that is not possible."
+"I will make every effort to give sufficient warning of an absence so that rescheduling is possible."
+"I will speak up if I do not understand a task."
+
+Item 2: Question Ideas
+References:
+Page with Link to PDF Of Survey: http://www.census.gov/acs/www/about_the_survey/forms_and_instructions/
+PUMS Documentation: http://www.census.gov/acs/www/data_documentation/public_use_microdata_sample/
+
+Question Topics: (!) means someone expressed interest in pursuing this. Matt & Wanli went through the survey, tossed out ideas and discussed some. These are the topics tossed out:
+- Education related to ...???
+- Language spoken
+- Change of residence type
+- Insurance: Change due to Obamacare is probably out of the question, but could look at # of enrolled vs not.
+- Difficulty in hearing or speaking
+ - Marital status/Birth
+- Army Service(!)
+  as related to education level or insurance
+  Matt suggested to see how education level &/or income related for those who had never served vs those who had served, but were now retired.
+- Transportation to Work (!)
+  by state? by sex? by age? by county? 
+- Commute time
+- Actively job hunting
+- Types of employment
+- Total income last 12 months (see above under Army Service)
+- Income & Education (kind of a gimme question, we would expect income to be higher with more education.)
+
+
+Item 3: Git Busy
+Wanli created the Git repository and added Matt as a user.
+Unable to add Adam, as we do not have his information.
+
+To Do:
+*Finalize group contract: Everyone
+  - Everyone: Update and/or approve teh list of commitments by 8 pm on Tuesday, April 8th.
+  - Matt: Compile document, print and bring to class Weds for sign & turn in.
+
+*Questions: Everyone
+  - Everyone: Refine existing question topics or suggest new ones. Each individual in group should have at least one unique question of interest ready to discuss on Weds. Inform group of which questions you'd like to take "charge" of.
+
+*Post meeting minutes: Matt
+  - Type up and post minutes.
+  - Done.
