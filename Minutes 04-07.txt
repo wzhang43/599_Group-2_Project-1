@@ -8,6 +8,7 @@ Role assignment:
 Matt: Recorder & Checker
 Wanli: Coordinator
 Adam: Monitor
+Update (4/8): Since Adam has dropped the class, Wanli will also act as Monitor
 
 Tasks:
 Group Contract, Due Weds Apr 9 (hardcopy)
@@ -27,6 +28,8 @@ Item 2: Question Ideas
 References:
 Page with Link to PDF Of Survey: http://www.census.gov/acs/www/about_the_survey/forms_and_instructions/
 PUMS Documentation: http://www.census.gov/acs/www/data_documentation/public_use_microdata_sample/
+PUMS data download link: http://factfinder2.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_pums_csv_2008_2012&prodType=document
+Explanation of variable names: See "Code Lists" at http://www.census.gov/acs/www/data_documentation/pums_documentation/
 
 Question Topics: (!) means someone expressed interest in pursuing this. Matt & Wanli went through the survey, tossed out ideas and discussed some. These are the topics tossed out:
 - Education related to ...???
@@ -37,7 +40,7 @@ Question Topics: (!) means someone expressed interest in pursuing this. Matt & W
  - Marital status/Birth
 - Army Service(!)
   as related to education level or insurance
-  Matt suggested to see how education level &/or income related for those who had never served vs those who had served, but were now retired.
+  Matt suggested to see how education level &/or income related for those who had never served vs those who had served, but were now retired (not really).
 - Transportation to Work (!)
   by state? by sex? by age? by county? 
 - Commute time
@@ -45,11 +48,13 @@ Question Topics: (!) means someone expressed interest in pursuing this. Matt & W
 - Types of employment
 - Total income last 12 months (see above under Army Service)
 - Income & Education (kind of a gimme question, we would expect income to be higher with more education.)
+- Update (4/8): What's the favorite type of fuel for heating of an RV owner/mobile home owner/family house owner? (!)
 
 
 Item 3: Git Busy
 Wanli created the Git repository and added Matt as a user.
 Unable to add Adam, as we do not have his information.
+Update (4/8): Adam has dropped the course, so Matt and Wanli will work on this project by themselves.
 
 To Do:
 *Finalize group contract: Everyone
