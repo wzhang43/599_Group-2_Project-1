@@ -8,6 +8,7 @@ Role assignment:
 Matt: Recorder & Checker
 Wanli: Coordinator
 Adam: Monitor
+Update (4/8): Since Adam has dropped the class, Wanli will also act as Monitor
 
 Tasks:
 Group Contract, Due Weds Apr 9 (hardcopy)
@@ -52,7 +53,7 @@ Question Topics: (!) means someone expressed interest in pursuing this. Matt & W
 Item 3: Git Busy
 Wanli created the Git repository and added Matt as a user.
 Unable to add Adam, as we do not have his information.
-Update: Adam has dropped the course, so Matt and Wanli will work on this project by themselves.
+Update (4/8): Adam has dropped the course, so Matt and Wanli will work on this project by themselves.
 
 To Do:
 *Finalize group contract: Everyone
