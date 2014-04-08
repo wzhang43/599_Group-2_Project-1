@@ -40,7 +40,7 @@ Question Topics: (!) means someone expressed interest in pursuing this. Matt & W
  - Marital status/Birth
 - Army Service(!)
   as related to education level or insurance
-  Matt suggested to see how education level &/or income related for those who had never served vs those who had served, but were now retired.
+  Matt suggested to see how education level &/or income related for those who had never served vs those who had served, but were now retired (not really).
 - Transportation to Work (!)
   by state? by sex? by age? by county? 
 - Commute time
@@ -48,6 +48,7 @@ Question Topics: (!) means someone expressed interest in pursuing this. Matt & W
 - Types of employment
 - Total income last 12 months (see above under Army Service)
 - Income & Education (kind of a gimme question, we would expect income to be higher with more education.)
+- Update (4/8): What's the favorite type of fuel for heating of an RV owner/mobile home owner/family house owner? (!)
 
 
 Item 3: Git Busy
