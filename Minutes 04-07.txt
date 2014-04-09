@@ -41,6 +41,7 @@ Question Topics: (!) means someone expressed interest in pursuing this. Matt & W
 - Army Service(!)
   as related to education level or insurance
   Matt suggested to see how education level &/or income related for those who had never served vs those who had served, but were now retired (not really).
+  Update (4/9): Will need to narrow down to one state and specify the time period to look at.
 - Transportation to Work (!)
   by state? by sex? by age? by county? 
 - Commute time
