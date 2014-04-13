@@ -1,0 +1,25 @@
+\documentclass{article}
+
+\title{Minutes from Apr 9}
+\author{Matt Edwards}
+\date{9th April 2014}
+
+\usepackage{fullpage}
+\usepackage{url}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\section{Questions}
+\begin{itemize}
+  \item Army Service(!)\\
+  as related to education level or insurance\\
+  Matt suggested to see how education level and/or income related for those who had never served vs those who had served, but were now retired.\\
+  (4/9 update) large state w/ army base (Texas) or two small states, one with Army Base one w/o
+
+\end{itemize}
+
+\section{To Do}
+Wanli & Matt agreed to each work on their topic of interest (Matt: military, Wanli heating) and compare notes on Monday with how far they had gotten. 
+
+\end{document}
