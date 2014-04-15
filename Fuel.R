@@ -92,10 +92,12 @@ or_fuel = mutate(or_fuel, fuel_type=HFL_code[as.character(HFL)],
 ## Since we're interested in the distribution of types of fuels
 ## within each type of housing unit, first group the data by the variable
 ## BLD (units in structure):
+house = group_by(or_fuel,house_type)
 
-(house = group_by(or_fuel,house_type))
+## Also group by type of heating fuels:
+fuel = group_by(or_fuel,fuel_type)
 
-
+## Obtain distribution of fuel types for each housing unit type:
 house_sum = house %.% 
   summarise(house_count=n(),
           type1=sum(HFL==1,na.rm=TRUE),
@@ -122,16 +124,24 @@ house_sum = house %.%
 ## Retain only the proportions ##
 house_prop = select(house_sum,prop1:prop9)
 
+## Obtain distribution of fuel types in total:
+fuel_sum = fuel %.%
+  summarise(fuel_count=n()) %.%
+  filter(fuel_type!="NA")
+
+
+
 
 ######################################################################################
 
 
-## Bar chart for distribution of housing unit types ##
-d <- data.frame(Units_in_structure=as.character(BLD_code), Count=house_sum$house_count)
 
-# Create side-by-side bar chart #
+## Bar chart for distribution of housing unit types ##
+house_df <- data.frame(Units_in_structure=as.character(BLD_code), Count=house_sum$house_count)
+
 require(ggplot2)
-ggplot(d, aes(x=Units_in_structure, y=Count)) + geom_bar(position=position_dodge())
+ggplot(house_df, aes(x=Units_in_structure, y=Count)) + geom_bar(position=position_dodge())+
+  ggtitle(bquote(atop(.("Bar Chart for Housing Units"), atop(italic(.("Oregon 2008-2012")), "")))) # add title & subtitle
 
 # Observation: 
 # (1) Not surprisingly, one-family detached home takes up the largest proportion of all types of homes in Oregon.
@@ -142,6 +152,23 @@ ggplot(d, aes(x=Units_in_structure, y=Count)) + geom_bar(position=position_dodge
 
 
 ######################################################################################
+
+
+
+## Bar chart for distribution of heating fuel types ##
+require(ggplot2)
+ggplot(fuel_sum, aes(x=fuel_type, y=fuel_count)) + geom_bar(position=position_dodge())+
+  ggtitle(bquote(atop(.("Bar Chart for House Heating Fuel"), atop(italic(.("Oregon 2008-2012")), "")))) # add title & subtitle
+
+# Observation:
+# (1) Electricity is the most widely-used type of heating fuel, seconded by utility gas.
+#
+# (2) Very few housesholds used coal/coke or solar energy for heating.
+
+
+
+######################################################################################
+
 
 
 ## Side-by-side bar chart for fuel types within housing unit types ##
