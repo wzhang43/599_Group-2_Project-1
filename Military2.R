@@ -1,0 +1,119 @@
+## == Military 2 ==
+#   Automatic downnloading of files
+library(dplyr)
+
+state_data <- read.csv("states.csv", stringsAsFactors=FALSE)
+state_abbrv <- tolower(state_data$Abbreviation)
+wage.data <- NULL
+i <- 1
+
+
+for(i in 2:6) {
+  dl_url <- paste("http://www2.census.gov/acs2012_1yr/pums/csv_p",state_abbrv[i],".zip", sep="")
+  dir_zip <- paste("data2/csv_p",state_abbrv[i],".zip", sep="")
+  dl_file <- paste("ss12p",state_abbrv[i],".csv", sep="")
+  dir_file <- paste("data2/", dl_file, sep="")
+  dir_cut <- paste("data2/ss12p",state_abbrv[i],"-cut.csv",sep="")
+  
+  ## download file.
+  download.file(dl_url, destfile = dir_zip)
+  
+  ## unzip file
+  system(paste("unzip", dir_zip, dl_file,"-d data2"))
+  
+  ## cut desired columns & import (44, 104, 75)
+  system(paste("cut -d, -f44,67,72", dir_file,">", dir_cut))
+  temp.mil <- read.csv(dir_cut, stringsAsFactors=FALSE)
+    
+  
+  temp.mil.G <- temp.mil %.%
+    filter(MIL!="NA") %.%
+    group_by(MIL) %.%
+    summarise(n(), avg_inc = mean(WAGP), sd_inc=sd(WAGP), 
+              min_inc=min(WAGP), med_inc=median(WAGP),max_inc=max(WAGP),
+              avg_schl=mean(SCHL), sd_schl=sd(SCHL)) %.%
+    mutate(State=state_abbrv[i])
+  
+  wage.data <- rbind(wage.data, temp.mil.G)
+  
+  ## Remove files
+  
+  system("rm -f data2/*.csv")
+  system(paste("rm -f", dir_zip))
+
+}
+
+wage.data.st <- group_by(wage.data, State)
+
+wage.data.5 <- filter(wage.data.st, MIL==5)
+wage.data.5 <- wage.data.5[order(-wage.data.5[,"avg_inc"]),]
+library(ggplot2)
+ggplot(wage.data.5, aes( avg_inc, factor(State), group=MIL, order= ))+geom_point()+geom_line()+xlab("Wage")+ylab("State")+scale_colour_brewer(palette = "Dark2")
+
+
+ggplot(wage.data.5, aes( avg_inc, reorder(factor(State),avg_inc), group=MIL))+geom_point(size=3)+geom_line()+
+  geom_errorbarh(aes(xmax=avg_inc+sd_inc, xmin=avg_inc-sd_inc))+
+  xlab("Wage")+ylab("State")
+
+
+
+
+
+
+
+
+# This code has been modified from original code provided in class by Charlotte Wickham
+
+tx_sm <- read.csv(unz("data2/csv_ptx.zip", "ss12ptx.csv"), nrows = 10, # notice just 10 lines! why?
+                  stringsAsFactors = FALSE)
+str(tx_sm)
+
+which(colnames(tx_sm) == "WAGP")
+
+
+## download file.
+download.file("http://www2.census.gov/acs2012_1yr/pums/csv_ptx.zip", destfile = "data2/csv_ptx.zip")
+
+## unzip file
+#unz("data2/csv_ptx.zip", "data2/ss12ptx.csv")
+system("unzip data2/csv_ptx.zip ss12ptx.csv -d data2")
+
+## cut desired columns & upload (44, 104, 75)
+system("cut -d, -f44,67,72 data2/ss12ptx.csv > data2/ss12ptx-cut.csv")
+tx.mil <- read.csv("data2/ss12ptx-cut.csv", stringsAsFactors = FALSE)
+
+## Add State and Status
+## Cut out rows with NA
+tx.mil.filt <- filter(tx.mil, MIL!="NA")
+
+
+## Add to primary data file.
+
+## Remove files
+
+system("rm -f data2/*.csv")
+system(paste("rm -f", dir_zip))
+
+
+
+
+
+
+
+
+tx.mil.G <- tx.mil %.%
+  filter(MIL!="NA") %.%
+  group_by(MIL) %.%
+  summarise(n(), avg_inc = mean(WAGP), sd_inc=sd(WAGP), 
+            min_inc=min(WAGP), med_inc=median(WAGP),max_inc=max(WAGP),
+            avg_schl=mean(SCHL), sd_schl=sd(SCHL)) %.%
+  mutate(State="tx")
+  
+all_data <- rbind(all_data, tx.mil.G)
+  
+  
+  names(all_data)
+  
+  all_data <- summarise(or.mil.G, n(), avg_inc = mean(PINCP), sd_inc=sd(PINCP), 
+                        min_inc=min(PINCP), med_inc=median(PINCP),max_inc=max(PINCP),
+                        avg_schl=mean(SCHL), sd_schl=sd(SCHL), State="or")

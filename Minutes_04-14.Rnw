@@ -1,0 +1,18 @@
+\documentclass{article}
+
+\title{Minutes from Apr 9}
+\author{Matt & Wanli}
+\date{14th April 2014}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\section{current Status}
+Matt has Oregon done for his question, and is planning on  moving on to other states. Possibly All States.
+
+Wanli has his data summarized, but wasn't quite decided on how to present it visually
+
+Alix said not to worry about statistical inference.
+
+
+\end{document}
