@@ -1,0 +1,32 @@
+\documentclass{article}
+
+
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\section{Questions of Interest}
+Our group tackled three questions of interest. 
+
+The first question is whether or not the source of heating varies by the type of housing unit. Oregon is obviously a state with reasonable summers and cold winters (as these past few months illustrate). As housing type (single family, multi unit, mobile home, etc) is often, at least anecdotally, related to income levels, it is an interesting question, and one that has repercussions based on the cost of different heating methods.
+
+The second was the effect of Military Service on achieved rank of education. Does military service affect, positively or negatively, the maximum amount of schooling received by an individual? We were curious because in some ways, military service can be viewed as an interruption in the "normal" life flow, one which often starts immediately after high shool or in young adulthood, the times when invidiaals in our culture typically pursue higher education.
+
+And related to the second, is the income of someone with past Military service different from someone who has never served?
+
+
+\section{Results}
+
+
+\section{Obstacles & Solutions}
+For the income question, an obstacle came with the realization that PINCP was ALL income sources combined, and the decision to analyze only Wage Income (WAGP.) The WAGP variable is very heavily loaded with zeroes, 46\% of the observations, in fact. Only 10\% of the Total Person Income set were zeroes. The inital question stated "income," but the intent was "Salary," so the dataset was trimmed to only Wage values greater than zero. 
+
+This was a tough decision, because some of those are probably valid zeros (retirees, etc.) while others are not. The question was not necessarily as simple as it started out. 
+
+
+\section{Future Work}
+As noted in the Obstacles section, there is work to be done in the income area. It would be useful to break down the income by the 8 sub-categories that make up Total Person Income (PINCP) and analyze those as they related to military service. How many individuals have other sources of income that contribute more than a Salary? Is there a difference in these levels between prior-service and no-service individuals?
+
+
+
+\end{document}

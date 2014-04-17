@@ -52,3 +52,15 @@ sum(or.inc.f$WAGP > 0)/31436 # 17817 / 31436 = 56%
 sum(or.inc.f$PINCP> 0)/31436 #  = 90%
 
 #yeah, that 44% of 0s is what's massively skewing that data.
+
+
+# 4/17 realized project explicitly stated "3 or 5 year" data, so, will need to adjust that.
+
+
+# Col #'s change with 3-year data. Of course they do.
+or_sm <- read.csv("data2/ss12pmo.csv", nrows = 10, stringsAsFactors = FALSE)
+str(or_sm)
+
+which(names(or_sm) %in% "WAGP")  # 75
+which(names(or_sm) %in% "MIL") #47
+which(names(or_sm) %in% "SCHL") #70
