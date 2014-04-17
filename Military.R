@@ -45,15 +45,9 @@ unzip("data/csv_por.zip", list = TRUE)
 
 ## Find numeric # for column
 # got ##'s from here: http://moonatnoon.com/puzzles/reference/a1b2z26.html rather than counting on fingers.
-#AR
-26 + 18 # = 44
-# BO
-26*2 + 15 # = 67
-# CZ
-26*3 + 26 #=104
 
 ## Ran Cut
-system("cut -d, -f44,67,104 data/ss12por.csv > data/ss12por-cut.csv")
+system("cut -d, -f44,67,72,104 data/ss12por.csv > data/ss12por-cut.csv")
 system.time(or.mil <- read.csv("data/ss12por-cut.csv", stringsAsFactors = FALSE))
 
 head(or.mil)
@@ -80,7 +74,7 @@ or.mil.df <- mutate(or.mil.df, MIL_code=MIL_status[MIL])
 head(or.mil.df)
 or.mil.G <- group_by(or.mil.df, MIL)
 all_data <- summarise(or.mil.G, n(), avg_inc = mean(PINCP), sd_inc=sd(PINCP), 
-          min_inc=min(PINCP), med_inc=median(PINCP),max_inc=max(PINCP),
+          Q1_inc=min(PINCP), med_inc=median(PINCP),max_inc=max(PINCP),
             avg_schl=mean(SCHL), sd_schl=sd(SCHL))
 
 library(ggplot2)
@@ -109,13 +103,33 @@ ggplot(or.mil.G, aes(PINCP)) +
   geom_histogram(aes(y=..count../sum(..count..))) + 
   facet_grid(MIL ~ ., scales="free")
 
+# And this is for the wages category.
+ggplot(or.mil.G, aes(WAGP)) + 
+  xlim(0,200000) +
+  geom_histogram(aes(y=..count../sum(..count..))) + 
+  facet_grid(MIL ~ ., scales="free")
 
+#and it's really telling that only cats 1 and 2 really show any distribution other than 0
+
+
+sum(or.mil.G$PINCP > 25000) #13882
+sum(or.mil.G$PINCP > 50000) #6385
 sum(or.mil.G$PINCP > 100000) ## 1540/31436 = 5%
 sum(or.mil.G$PINCP > 200000) ## 365 / 31436 = 1% of data
 sum(or.mil.G$PINCP > 300000) ## 252
 sum(or.mil.G$PINCP > 400000) ## 27
 sum(or.mil.G$PINCP > 500000) ## 12
 sum(or.mil.G$PINCP < 0) ## 35
+
+
+sum(or.mil.G$WAGP > 25000) #9690
+sum(or.mil.G$WAGP > 50000) ## 4556
+sum(or.mil.G$WAGP > 100000) ## 1003
+sum(or.mil.G$WAGP > 200000) ## 238 
+sum(or.mil.G$WAGP > 300000) ## 238
+sum(or.mil.G$WAGP > 400000) ## 0
+sum(or.mil.G$WAGP > 500000) ## 0
+sum(or.mil.G$WAGP < 0) ## 0
 
 ## School Only Summary
 summarise(or.mil.G, n(), avg_schl=mean(SCHL), sd_schl=sd(SCHL), 
@@ -155,3 +169,6 @@ ggplot(or.mil.G, aes(factor(SCHL)))+geom_histogram(aes(y=..count../sum(..count..
 #   names(or_df) # gives you names
 #   which( names (or_df)=="WAGP")
 #  which (names(or_df) %in% c("WAGP", "COW"))
+
+
+

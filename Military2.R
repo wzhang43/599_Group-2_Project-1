@@ -1,14 +1,16 @@
 ## == Military 2 ==
 #   Automatic downnloading of files
 library(dplyr)
-
+library(ggplot2)
+## State Data from : 
+# http://www.fonz.net/blog/archives/2008/04/06/csv-of-states-and-state-abbreviations/
 state_data <- read.csv("states.csv", stringsAsFactors=FALSE)
 state_abbrv <- tolower(state_data$Abbreviation)
 wage.data <- NULL
 i <- 1
 
 
-for(i in 2:6) {
+for(i in 36:51) {
   dl_url <- paste("http://www2.census.gov/acs2012_1yr/pums/csv_p",state_abbrv[i],".zip", sep="")
   dir_zip <- paste("data2/csv_p",state_abbrv[i],".zip", sep="")
   dl_file <- paste("ss12p",state_abbrv[i],".csv", sep="")
@@ -31,6 +33,7 @@ for(i in 2:6) {
     group_by(MIL) %.%
     summarise(n(), avg_inc = mean(WAGP), sd_inc=sd(WAGP), 
               min_inc=min(WAGP), med_inc=median(WAGP),max_inc=max(WAGP),
+              Q1_inc=quantile(WAGP, 0.25), Q3_inc=quantile(WAGP, 0.75),
               avg_schl=mean(SCHL), sd_schl=sd(SCHL)) %.%
     mutate(State=state_abbrv[i])
   
@@ -47,7 +50,7 @@ wage.data.st <- group_by(wage.data, State)
 
 wage.data.5 <- filter(wage.data.st, MIL==5)
 wage.data.5 <- wage.data.5[order(-wage.data.5[,"avg_inc"]),]
-library(ggplot2)
+
 ggplot(wage.data.5, aes( avg_inc, factor(State), group=MIL, order= ))+geom_point()+geom_line()+xlab("Wage")+ylab("State")+scale_colour_brewer(palette = "Dark2")
 
 
@@ -56,11 +59,30 @@ ggplot(wage.data.5, aes( avg_inc, reorder(factor(State),avg_inc), group=MIL))+ge
   xlab("Wage")+ylab("State")
 
 
+# i like this plot, but let's re do it with median & IQR. Which means I'll need to update to include Q1 and Q3
+
+wage.data.235 <- filter(wage.data, MIL %in% c(2,3,5))
+
+ggplot(wage.data.235, aes( reorder(factor(State),med_inc),y=med_inc, ymin=Q1_inc, ymax=Q3_inc, group=MIL, colour=factor(MIL)))+geom_point(size=3, position=position_dodge(width=0.2))+
+  geom_errorbar( position=position_dodge(width=0.2), width=0.2)+
+  xlab("State")+ylab("Wage")+coord_flip()+geom_line()
+#okay, working for one state.
+## This helped immensely: http://stackoverflow.com/questions/20197118/dotplot-with-error-bars-two-series-light-jitter
+
+
+## when adjusting to median, got medians of 0 for first state, lets look at hist:
+
+t.mil.f <- filter(temp.mil, MIL!="NA")
+t.mil.f.g <- group_by(t.mil.f, MIL)
+ggplot(t.mil.f.g, aes(WAGP)) + 
+  xlim(0,200000) +
+  geom_histogram(aes(y=..count../sum(..count..))) + 
+  facet_grid(MIL ~ ., scales="free")
+# maybe alabama is a really bad example. Lets look at AZ
 
 
 
-
-
+## Below this line is the code for testing the download in prep for making it a loop.
 
 # This code has been modified from original code provided in class by Charlotte Wickham
 
