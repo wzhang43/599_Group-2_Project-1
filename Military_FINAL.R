@@ -57,12 +57,17 @@ for(i in 1:51) {  ## ====================== FOR LOOP ===========================
 
 write.csv(wage.data, "MilWageData.csv", row.names=FALSE)
 
+## Only run if not downloading 
+wage.data <- read.csv("MilWageData.csv", stringsAsFactors=FALSE)
+
 wage.data.st <- group_by(wage.data, State, MIL)
 
 ## Wage Graph # 1 - All-in-One Error Bars
-ggplot(wage.data.st, aes( reorder(factor(State),med_inc),y=med_inc, ymin=Q1_inc, ymax=Q3_inc, group=MIL, colour=factor(MIL)))+geom_point(size=3, position=position_dodge(width=0.2))+
+ggplot(wage.data.st, aes( reorder(factor(State),med_inc),y=med_inc, ymin=Q1_inc, ymax=Q3_inc, group=MIL, colour=factor(MIL_Status)))+geom_point(size=3, position=position_dodge(width=0.2))+
   geom_errorbar( position=position_dodge(width=0.2), width=0.2)+
-  xlab("State")+ylab("Wage")+coord_flip()+geom_line()
+  xlab("State")+ylab("Wage")+geom_line()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Median Wage (with IQR) by State & Service")
+
 # code works. Not sure I like this graph for readability. Also, I can't seem to get the "reorder" to latch onto a single category. It's all /kind of/ going in a general "less" direction, but not explicitly.
 
 ## Wage Graph # 2
@@ -86,9 +91,11 @@ ggplot(wage.data.st, aes(med_sch))+geom_histogram(aes(y=..count../sum(..count..)
 # this doesn't do much for me. When I did the original on my test data, I was using the actual values, whereas here I've just got the median. 
 
 ## School Plot #2 - Dotplot @ median w/ IQR
-ggplot(wage.data.st, aes( reorder(factor(State),med_sch),y=med_sch, ymin=Q1_sch, ymax=Q3_sch, group=MIL, colour=factor(MIL_Status)))+geom_point(size=6, position=position_dodge(width=0.4))+
+ggplot(wage.data.st, aes( reorder(factor(State),med_sch),y=med_sch, ymin=Q1_sch, ymax=Q3_sch, group=MIL, colour=factor(MIL_Status)))+geom_point(size=4, position=position_dodge(width=0.4))+
   geom_errorbar( position=position_dodge(width=0.4), size=0.5)+
   xlab("State")+ylab("School")+geom_line()+
-  scale_y_continuous(breaks=c(16,17,18,19,20,21,22, 23), labels=c("HS", "GED", "<1YR Coll", "Coll, ND", "AS", "BS", "MS", "Prof >BS"))
+  scale_y_continuous(breaks=c(16,17,18,19,20,21,22, 23), labels=c("HS", "GED", "<1YR Coll", "Coll, ND", "AS", "BS", "MS", "Prof >BS"))+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Median School (with IQR) by State & Service")
+
 
 # this is not a perfect graph, but I think it's better than the histogram for this option.

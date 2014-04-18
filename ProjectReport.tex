@@ -8,9 +8,10 @@
 \usepackage{floatrow} %%http://tex.stackexchange.com/questions/6850/table-and-figure-side-by-side-with-independent-captions
 
 
+\usepackage{Sweave}
 \begin{document}
-\maketitle %% ==== We may want to do this by hand, to give more room in the rest of the document ====
-\SweaveOpts{concordance=TRUE}
+\maketitle
+\input{ProjectReport-concordance}
 
 \section{Questions of Interest}
 Our group tackled three questions of interest:
