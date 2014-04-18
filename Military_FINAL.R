@@ -11,7 +11,7 @@ MIL_status <- c("1"="Active_Duty", "2"="Retired_Recent", "3"="Retired", "4"="No_
 
 wage.data <- NULL
 
-for(i in 15:51) {  ## ====================== FOR LOOP ===============================
+for(i in 1:51) {  ## ====================== FOR LOOP ===============================
                    dl_url <- paste("http://www2.census.gov/acs2012_3yr/pums/csv_p",state_abbrv[i],".zip", sep="")
                    dir_zip <- paste("data2/csv_p",state_abbrv[i],".zip", sep="")
                    dl_file <- paste("ss12p",state_abbrv[i],".csv", sep="")
@@ -53,7 +53,9 @@ for(i in 15:51) {  ## ====================== FOR LOOP ==========================
 ## choked on CA, had to DL that one manually & add. 
 # & GA (restarted loop at index) & IN (same), then did okay on the rest. It wasn't downloading the whole file for some reason & choked on the check.
 
-write.csv(wage.data, file="MilWageData.csv")
+## DL # 2 - made it all the way to HI before locking up.
+
+write.csv(wage.data, "MilWageData.csv", row.names=FALSE)
 
 wage.data.st <- group_by(wage.data, State, MIL)
 
@@ -72,20 +74,21 @@ ggplot(wage.data.st, aes( reorder(factor(State),med_inc),y=med_inc, ymin=Q1_inc,
 
 ## Wage Graph # 3 - HIstogram
 ggplot(wage.data.st, aes(med_inc)) + 
-  xlim(0,100000) +
+  xlim(0,75000) + xlab("Median Wage Per State") + ylab("Density")+
   geom_histogram(aes(y=..count../sum(..count..))) + 
   facet_grid(MIL_Status ~ .)
+
+# I think this one is better than the previous in terms of the story I'm tryin to tell.
 
 
 # School Plot 1 - HIstograms
 ggplot(wage.data.st, aes(med_sch))+geom_histogram(aes(y=..count../sum(..count..)))+facet_grid(MIL_Status ~ ., scales="free")
+# this doesn't do much for me. When I did the original on my test data, I was using the actual values, whereas here I've just got the median. 
 
-# this didn't do much for me.
-
-## School Plot #1
+## School Plot #2 - Dotplot @ median w/ IQR
 ggplot(wage.data.st, aes( reorder(factor(State),med_sch),y=med_sch, ymin=Q1_sch, ymax=Q3_sch, group=MIL, colour=factor(MIL_Status)))+geom_point(size=6, position=position_dodge(width=0.4))+
-  geom_errorbar( position=position_dodge(width=0.4), width=0.4)+
-  xlab("State")+ylab("School")+coord_flip()+geom_line()+
-  scale_y_continuous(breaks=c(16,17,18,19,20,21,22), labels=c("HS", "GED", "<1YR Coll", "Coll, ND", "AS", "BS", "MS"))
+  geom_errorbar( position=position_dodge(width=0.4), size=0.5)+
+  xlab("State")+ylab("School")+geom_line()+
+  scale_y_continuous(breaks=c(16,17,18,19,20,21,22, 23), labels=c("HS", "GED", "<1YR Coll", "Coll, ND", "AS", "BS", "MS", "Prof >BS"))
 
-str(wage.data.st)
+# this is not a perfect graph, but I think it's better than the histogram for this option.
