@@ -10,7 +10,7 @@
 
 \usepackage{Sweave}
 \begin{document}
-\maketitle
+\maketitle %% ==== We may want to do this by hand, to give more room in the rest of the document ====
 \input{ProjectReport-concordance}
 
 \section{Questions of Interest}
@@ -24,6 +24,9 @@ Our group tackled three questions of interest:
 \end{enumerate}
 
 \section{Results}
+Surprisingly, those who Never Served had a lower median income overall than those who were retired from service, as seen in Figure 1. It is doubtful if there is a statistical difference, as the IQR, as indicated by the error bars, overlap for all categories. 
+
+For education, military service does not seem to play a significant role. The median education level is 18 (some college, but no degree) for a vast majority of the state and service level combinations (West Virgina and DC being two notable exceptions.) This analysis is based on The categories for School Level being expressed numerically, and essentially in order (higher numbers mean more education, lower numbers mean less education). However, this is categorical data and some of the levels are functionally equivalent (16 = High School Diploma, 17 = GED) so this graph does not tell the whole story.
 \begin{figure}[h!]
 \begin{floatrow}
 \ffigbox{%
@@ -50,7 +53,7 @@ One problem we were unable to solve was, with 3 categories on the point chart, i
 \section{Future Work}
 As noted in the Obstacles section, there is work to be done in the income area. It would be useful to break down the income by the 8 sub-categories that make up Total Person Income (PINCP) and analyze those as they related to military service. How many individuals have other sources of income that contribute more than a Salary? Is there a difference in these levels between prior-service and no-service individuals?
 
-One breakdown that would be applied to all three questions is the breakdown of time out of service. The Military service category had six levels: Under 17, Active Service, Prior Service within 1 year, Prior Service more than 1 year ago, No service (Reserves), Never Served. However, there are variables for the timeframe of service (Iraq War, Korean War, Vietnam War, etc.) Breaking the results down by these categories could be informative. 
+One breakdown that would be applied to all three questions is the breakdown of time out of service. There is more granularity available for the timeframe of service (Iraq War, Korean War, Vietnam War, etc.) Breaking the results down by these categories could be informative. 
 
 
 \end{document}

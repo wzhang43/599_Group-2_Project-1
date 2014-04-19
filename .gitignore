@@ -9,8 +9,8 @@
 .Rproj.user
 
 # Extra Latex Files
-.log
-.synctex.gz
+*.log
+*.synctex.gz
 
 # Don't need to upload CSV files
 *.csv
