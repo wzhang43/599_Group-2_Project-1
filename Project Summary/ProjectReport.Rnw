@@ -29,16 +29,17 @@ For education, military service does not seem to play a significant role (Figure
 \begin{figure}[h!]
 \begin{floatrow}
 \ffigbox{%
-  \includegraphics[width=0.5\textwidth]{Wage}%
+  \includegraphics[width=0.5\textwidth]{../Wage_Education/Graphs/Wages}%
 }{%
   \caption{Income}%
 }
 \ffigbox{%
-  \includegraphics[width=0.5\textwidth]{School}%
+  \includegraphics[width=0.5\textwidth]{../Wage_Education/Graphs/School}%
 }{%
   \caption{Education}%
 }
 \end{floatrow}
+
 \end{figure}
 
 
@@ -53,6 +54,8 @@ One problem we were unable to solve was, with 3 categories on the point chart, i
 As noted in the Obstacles section, there is work to be done in the income area. It would be useful to break down the income by the 8 sub-categories that make up Total Person Income (PINCP) and analyze those as they related to military service. How many individuals have other sources of income that contribute more than a Salary? Is there a difference in these levels between prior-service and no-service individuals?
 
 One breakdown that would be applied to all three questions is the breakdown of time out of service. There is more granularity available for the timeframe of service (Iraq War, Korean War, Vietnam War, etc.) Breaking the results down by these categories could be informative. 
+
+For the education question, it would be useful to turn the question around, and look at if the proportion of those receiving higher education degrees (BS, MS, PhD) is the same based on prior military service. 
 
 
 \end{document}
