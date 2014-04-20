@@ -1,6 +1,5 @@
 library(ggplot2)
 library(dplyr)
-setwd("D:/Project_1")
 
 
 ########################## download & unzip all data ###############################
@@ -70,7 +69,7 @@ save(Insurance.data, file="Insurance_summary.rda") # save it!
 
 ############################### graphics #####################################
 
-load("D:/Project_1/Insurance_summary.rda")
+load("Insurance_summary.rda")
 
 
 # Minor change to label, and add a column for service status:
@@ -86,17 +85,19 @@ odds_ratio_bystate = Insurance.data %.%
   group_by(state) %.% 
   summarise(odds_ratio=(ins_prop[mil_ind==1]/(1-ins_prop[mil_ind==1]))/
       (ins_prop[mil_ind==0]/(1-ins_prop[mil_ind==0])))
-  
-
+max(odds_ratio_bystate$odds_ratio)
+min(odds_ratio_bystate$odds_ratio)
 
 # Subset proportions by military service status:
 served_bystate = Insurance.data %.% filter(mil_ind==1)
 not_served_bystate = Insurance.data %.% filter(mil_ind==0)
 
+min(served_bystate$ins_prop)
+max(not_served_bystate$ins_prop)
 
 
 # Chloropleth map for odds ratio of insurance coverage:
-usa_df <- readRDS("D:/Project_1/usa-state-map_all.rds") # make sure you have this file from class repository
+usa_df <- readRDS("usa-state-map_all.rds") # make sure you have this file from class repository
 served_st <- inner_join(odds_ratio_bystate, usa_df, by = "state")
 
 qplot(x, y, data = served_st,
@@ -116,9 +117,10 @@ props_st <- inner_join(props, usa_df, by = "state")
 qplot(x, y, data = props_st,
   geom = "polygon", group = group, fill = value) +
   coord_equal() +
-  facet_grid(serv_stat~.) # place two panels in vertical direction
+  facet_grid(~serv_stat) +
+    ggtitle(bquote(atop(.("Map of Health Insurance Coverage Rate"), atop(italic(.("United States 2008-2012")), "")))) # add title & subtitle
 
-ggsave("insurance_sbsmap.png", width=4, height=4, units="in", dpi=400) # produces high-resolution plot for LATEX
+ggsave("insurance_sbsmap.png", width=7, height=4, units="in", dpi=400) # produces high-resolution plot for LATEX
 
 
 
