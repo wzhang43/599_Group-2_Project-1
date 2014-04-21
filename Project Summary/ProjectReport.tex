@@ -1,6 +1,6 @@
 \documentclass{article}
 
-
+\title{\vspace{-2.0cm}Stuff}
 \title{ST 599 Project 1 Report}
 \author{Wanli Zhang \& Matt Edwards}
 \date{21st April 2014}
@@ -11,11 +11,15 @@
 
 \usepackage{Sweave}
 \begin{document}
-\maketitle %% ==== We may want to do this by hand, to give more room in the rest of the document ====
+%\maketitle %% ==== We may want to do this by hand, to give more room in the rest of the document ====
 \input{ProjectReport-concordance}
 
-
-
+\begingroup  
+  \centering
+  \LARGE ST 599 Project 1 Report\\[1em]
+  \large Wanli Zhang \& Matt Edwards\par
+\endgroup
+% uses 2nd answer from here: http://tex.stackexchange.com/questions/29593/shift-title-and-author-text-up
 
 \section{Background $\&$ Questions of Interest}
 Our group used the 5-year PUMS data of all states from the American Community Survey, and tackled three questions of interest:
@@ -53,7 +57,7 @@ Surprisingly, those who Never Served had a lower median income overall than thos
 \end{figure}
 
 
-\pagebreak
+%\pagebreak
 
 
 \subsection{Insurance}
@@ -86,7 +90,9 @@ Another problem came up when we attempted to use odds ratio to describe insruanc
 
 
 \section{Future Work}
-As noted in the Obstacles section, there is work to be done in the income area. It would be useful to break down the income by the 8 sub-categories that make up Total Person Income (PINCP) and analyze those as they related to military service. How many individuals have other sources of income that contribute more than a Salary? Is there a difference in these levels between prior-service and no-service individuals? Another breakdown that would be applied to all three questions is the breakdown of time out of service. There is more granularity available for the timeframe of service (Iraq War, Korean War, Vietnam War, etc.) Breaking the results down by these categories could be informative.\\ 
+As noted in the Obstacles section, there is work to be done in the income area. It would be useful to break down the income by the 8 sub-categories that make up Total Person Income (PINCP) and analyze those as they related to military service. How many individuals have other sources of income that contribute more than a Salary? Is there a difference in these levels between prior-service and no-service individuals?\\
+
+One breakdown that would be applied to all three questions is the breakdown of time out of service. There is more granularity available for the timeframe of service (Iraq War, Korean War, Vietnam War, etc.) Breaking the results down by these categories could be informative.\\ 
 
 For the education question, it would be useful to turn the question around, and look at if the proportion of those receiving higher education degrees (BS, MS, PhD) is the same based on prior military service.\\
 

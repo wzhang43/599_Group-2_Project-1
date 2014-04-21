@@ -92,8 +92,10 @@ min(odds_ratio_bystate$odds_ratio)
 served_bystate = Insurance.data %.% filter(mil_ind==1)
 not_served_bystate = Insurance.data %.% filter(mil_ind==0)
 
-min(served_bystate$ins_prop)
-max(not_served_bystate$ins_prop)
+max(served_bystate$ins_prop) # MA
+min(served_bystate$ins_prop) # AR
+max(not_served_bystate$ins_prop) # MA
+min(not_served_bystate$ins_prop) # TX
 
 
 # Chloropleth map for odds ratio of insurance coverage:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.12.11)  20 APR 2014 05:08
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.12.11)  20 APR 2014 20:42
 entering extended mode
 **ProjectReport.tex
 
@@ -403,63 +403,50 @@ Package color Info: Driver file: pdftex.def on input line 130.
 \makeMPintoPDFobject=\count103
 \everyMPtoPDFconversion=\toks19
 )
-LaTeX Font Info:    Try loading font information for T1+futs on input line 14.
+("C:\Users\Billdruid\Documents\Project_1_local\Project Summary\ProjectReport-co
+ncordance.tex")
+LaTeX Font Info:    Try loading font information for T1+futs on input line 24.
  (C:\CTEX\MiKTeX\tex\latex\fourier\t1futs.fd
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 14
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 24
 .
 
 (C:\CTEX\MiKTeX\tex\latex\fourier\fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 14.
+(Font)              scaled to size 13.24796pt on input line 24.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 14.
+(Font)              scaled to size 9.19998pt on input line 24.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 14.
+(Font)              scaled to size 7.35999pt on input line 24.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 14.
+(Font)              scaled to size 13.24796pt on input line 24.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 14.
+(Font)              scaled to size 9.19998pt on input line 24.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 14.
-
-("C:\Users\Billdruid\Documents\Project_1_local\Project Summary\ProjectReport-co
-ncordance.tex")
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 20.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 20.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 20.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 20.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 20.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 20.
+(Font)              scaled to size 7.35999pt on input line 24.
 
 <../Wage_Education/Graphs/Wages.png, id=2, 3212.0pt x 1606.0pt>
 File: ../Wage_Education/Graphs/Wages.png Graphic file (type png)
 
 <use ../Wage_Education/Graphs/Wages.png>
 Package pdftex.def Info: ../Wage_Education/Graphs/Wages.png used on input line 
-45.
+49.
 (pdftex.def)             Requested size: 234.8775pt x 117.43062pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 45--45
+Overfull \hbox (5.0pt too wide) in paragraph at lines 49--49
  [][] 
  []
 
 File: ../Wage_Education/Graphs/Wages.png Graphic file (type png)
 <use ../Wage_Education/Graphs/Wages.png>
 Package pdftex.def Info: ../Wage_Education/Graphs/Wages.png used on input line 
-45.
+49.
 (pdftex.def)             Requested size: 234.8775pt x 117.43062pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 45--45
+Overfull \hbox (5.0pt too wide) in paragraph at lines 49--49
  [][] 
  []
 
@@ -468,20 +455,64 @@ File: ../Wage_Education/Graphs/School.png Graphic file (type png)
 
 <use ../Wage_Education/Graphs/School.png>
 Package pdftex.def Info: ../Wage_Education/Graphs/School.png used on input line
- 50.
+ 54.
 (pdftex.def)             Requested size: 234.8775pt x 117.43062pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 50--50
+Overfull \hbox (5.0pt too wide) in paragraph at lines 54--54
  [][] 
  []
 
 File: ../Wage_Education/Graphs/School.png Graphic file (type png)
 <use ../Wage_Education/Graphs/School.png>
 Package pdftex.def Info: ../Wage_Education/Graphs/School.png used on input line
- 50.
+ 54.
 (pdftex.def)             Requested size: 234.8775pt x 117.43062pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 50--50
+Overfull \hbox (5.0pt too wide) in paragraph at lines 54--54
+ [][] 
+ []
+
+<../Insurance/Graphs/insurance_sbsmap.png, id=5, 505.89pt x 289.08pt>
+File: ../Insurance/Graphs/insurance_sbsmap.png Graphic file (type png)
+
+<use ../Insurance/Graphs/insurance_sbsmap.png>
+Package pdftex.def Info: ../Insurance/Graphs/insurance_sbsmap.png used on input
+ line 72.
+(pdftex.def)             Requested size: 234.8775pt x 134.2179pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 72--72
+ [][] 
+ []
+
+File: ../Insurance/Graphs/insurance_sbsmap.png Graphic file (type png)
+<use ../Insurance/Graphs/insurance_sbsmap.png>
+Package pdftex.def Info: ../Insurance/Graphs/insurance_sbsmap.png used on input
+ line 72.
+(pdftex.def)             Requested size: 234.8775pt x 134.2179pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 72--72
+ [][] 
+ []
+
+<../Insurance/Graphs/insurance_oddsmap.png, id=6, 505.89pt x 289.08pt>
+File: ../Insurance/Graphs/insurance_oddsmap.png Graphic file (type png)
+
+<use ../Insurance/Graphs/insurance_oddsmap.png>
+Package pdftex.def Info: ../Insurance/Graphs/insurance_oddsmap.png used on inpu
+t line 77.
+(pdftex.def)             Requested size: 234.8775pt x 134.2179pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 77--77
+ [][] 
+ []
+
+File: ../Insurance/Graphs/insurance_oddsmap.png Graphic file (type png)
+<use ../Insurance/Graphs/insurance_oddsmap.png>
+Package pdftex.def Info: ../Insurance/Graphs/insurance_oddsmap.png used on inpu
+t line 77.
+(pdftex.def)             Requested size: 234.8775pt x 134.2179pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 77--77
  [][] 
  []
 
@@ -490,91 +521,51 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 50--50
 {C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}} <C:/Users/Bi
 lldruid/Documents/Project_1_local/Wage_Education/Graphs/Wages.png> <C:/Users/Bi
 lldruid/Documents/Project_1_local/Wage_Education/Graphs/School.png>]
-<../Insurance/Graphs/insurance_sbsmap.png, id=16, 505.89pt x 289.08pt>
-File: ../Insurance/Graphs/insurance_sbsmap.png Graphic file (type png)
-
-<use ../Insurance/Graphs/insurance_sbsmap.png>
-Package pdftex.def Info: ../Insurance/Graphs/insurance_sbsmap.png used on input
- line 68.
-(pdftex.def)             Requested size: 234.8775pt x 134.2179pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 68--68
- [][] 
- []
-
-File: ../Insurance/Graphs/insurance_sbsmap.png Graphic file (type png)
-<use ../Insurance/Graphs/insurance_sbsmap.png>
-Package pdftex.def Info: ../Insurance/Graphs/insurance_sbsmap.png used on input
- line 68.
-(pdftex.def)             Requested size: 234.8775pt x 134.2179pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 68--68
- [][] 
- []
-
-<../Insurance/Graphs/insurance_oddsmap.png, id=17, 505.89pt x 289.08pt>
-File: ../Insurance/Graphs/insurance_oddsmap.png Graphic file (type png)
-
-<use ../Insurance/Graphs/insurance_oddsmap.png>
-Package pdftex.def Info: ../Insurance/Graphs/insurance_oddsmap.png used on inpu
-t line 73.
-(pdftex.def)             Requested size: 234.8775pt x 134.2179pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 73--73
- [][] 
- []
-
-File: ../Insurance/Graphs/insurance_oddsmap.png Graphic file (type png)
-<use ../Insurance/Graphs/insurance_oddsmap.png>
-Package pdftex.def Info: ../Insurance/Graphs/insurance_oddsmap.png used on inpu
-t line 73.
-(pdftex.def)             Requested size: 234.8775pt x 134.2179pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 73--73
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
 [2 <C:/Users/Billdruid/Documents/Project_1_local/Insurance/Graphs/insurance_sbs
 map.png (PNG copy)> <C:/Users/Billdruid/Documents/Project_1_local/Insurance/Gra
-phs/insurance_oddsmap.png (PNG copy)>] [3]
+phs/insurance_oddsmap.png (PNG copy)>]
 ("C:\Users\Billdruid\Documents\Project_1_local\Project Summary\ProjectReport.au
 x") ) 
 Here is how much of TeX's memory you used:
- 3772 strings out of 495354
- 54433 string characters out of 3183858
+ 3754 strings out of 495354
+ 54175 string characters out of 3183858
  100900 words of memory out of 3000000
- 6868 multiletter control sequences out of 15000+200000
- 64381 words of font info for 82 fonts, out of 3000000 for 9000
+ 6850 multiletter control sequences out of 15000+200000
+ 42790 words of font info for 64 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,11n,38p,720b,402s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,11n,38p,649b,402s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/CTEX/MiKTeX/fonts/type1/adobe/
 utopia/putr8a.pfb>
-Output written on ProjectReport.pdf (3 pages, 818994 bytes).
+Output written on ProjectReport.pdf (2 pages, 817345 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 38 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

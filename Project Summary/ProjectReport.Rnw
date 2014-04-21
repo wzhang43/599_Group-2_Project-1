@@ -60,7 +60,7 @@ Surprisingly, those who Never Served had a lower median income overall than thos
 
 
 \subsection{Insurance}
-As can be observed in Figure 3, in every state, the health insurance coverage rate for people who have served or are on active duty is greater than that for those who haven't served at all. In fact, as Figure 2 demonstrates, the odds of being covered by health insurance for people who have served are at least two times as those for people who have not. This ratio is largest in California (5.30), and smallest in South Dakota (2.30).
+As can be observed in Figure 3, in every state, the health insurance coverage rate for people who have served or are on active duty is greater than that for those who haven't served at all. In fact, as Figure 4 demonstrates, the odds of being covered by health insurance for people who have served are at least two times as those for people who have not. This ratio is largest in California (5.30), and smallest in South Dakota (2.30).
 
 \begin{figure}[ht!]
 \begin{floatrow}
@@ -81,7 +81,7 @@ As can be observed in Figure 3, in every state, the health insurance coverage ra
 
 
 \section{Obstacles \& Solutions}
-For the income question, an obstacle came with the realization that the variable "PINCP" was ALL income sources combined, and the decision to analyze only Wage Income (WAGP.) The WAGP variable is very heavily loaded with zeroes, 46\% of the observations, in fact. Only 10\% of the Total Person Income set were zeroes. The initial question stated "income", but the intent was "Salary", so the data set was trimmed to only Wage values greater than zero. This was a tough decision, because some of those are probably valid zeros (retirees, etc.) while others are not. The question was not necessarily as simple as it started out.\\
+For the income question, an obstacle came with the realization that the variable "PINCP" was ALL income sources combined, and the decision to analyze only Wage Income (WAGP). The WAGP variable is very heavily loaded with zeroes, 46\% of the observations, in fact. Only 10\% of the Total Person Income set were zeroes. The initial question stated "income", but the intent was "Salary", so the data set was trimmed to only Wage values greater than zero. This was a tough decision, because some of those are probably valid zeros (retirees, etc.) while others are not. The question was not necessarily as simple as it started out.\\
 
 One problem we were unable to solve was, with 3 categories on the point chart, it would not settle on one of them to order by. They were overall in order, but no individual category was strictly in order.\\
 
@@ -91,7 +91,7 @@ Another problem came up when we attempted to use odds ratio to describe insruanc
 \section{Future Work}
 As noted in the Obstacles section, there is work to be done in the income area. It would be useful to break down the income by the 8 sub-categories that make up Total Person Income (PINCP) and analyze those as they related to military service. How many individuals have other sources of income that contribute more than a Salary? Is there a difference in these levels between prior-service and no-service individuals?\\
 
-One breakdown that would be applied to all three questions is the breakdown of time out of service. There is more granularity available for the timeframe of service (Iraq War, Korean War, Vietnam War, etc.) Breaking the results down by these categories could be informative.\\ 
+One breakdown that would be applied to all three questions is the breakdown of time out of service. There is more granularity available for the timeframe of service (Iraq War, Korean War, Vietnam War, etc). Breaking the results down by these categories could be informative.\\ 
 
 For the education question, it would be useful to turn the question around, and look at if the proportion of those receiving higher education degrees (BS, MS, PhD) is the same based on prior military service.\\
 
