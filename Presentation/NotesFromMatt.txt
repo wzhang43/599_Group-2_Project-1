@@ -1,0 +1,16 @@
+## Notes for presentation
+
+Background: 
+  
+  In the  US, Military service often happens immediately after high school or college. This could be seen as an interruption of the "normal" flow of life for an individual. Because of this, we were interested to see if there were any differences between individuals with some military service vs those who had never served for some of the major life "markers" US society recognizes: Income, Wage and Health Insurance Coverage
+
+Note: I think I technically used the 3-year PUMS data, not the 5-year, so we should probably make that distinction.
+
+
+Question:
+  Was there something that specifically interested you about health insurance?
+
+  I had other questions an hour ago, and of course right now, I can't think of them.
+
+  Is there any information you need from me in order to be able to present?
+
