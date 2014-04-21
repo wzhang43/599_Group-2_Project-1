@@ -154,11 +154,23 @@
 \subsection{}
 
 
-\begin{frame}{Background}
+\begin{frame}{Motivation}
 \begin{itemize}
-\item[]Data used for this project are the 5-year Public Use Microdata Samples (PUMS) for each State as well as the District of Columbia and Puerto Rico. Only the population records were considered.
+\item In the US, Military service often happens immediately after high school or college.
+\item An interruption of the "normal" flow of life for an individual.
+\item Would be interesting to see if there were any differences between individuals with some military service vs those who had never served for some of the major life "markers" US society recognizes: Education, Wage and Health Insurance Coverage.
 \end{itemize}
 \end{frame}
+
+
+\begin{frame}{Data Information}
+\begin{itemize}
+\item Public Use Microdata Samples (PUMS) for all States.
+\item Only the population records were considered.
+\item Used the 3-year data for Education and Wages, and the 5-year data for Health Insurance Coverage.
+\end{itemize}
+\end{frame}
+
 
 
 \begin{frame}{Questions of Interest}
@@ -181,6 +193,8 @@
 \item Military service does not seem to play a significant role.
 \item[]
 \item Median education level is 18 (College, Non-Degree) for most state/service level combinations.
+\item[]
+\item DC: median education level is BS, while most other states are College Non-degree.
 \end{enumerate}
 \end{frame}
 
@@ -188,7 +202,7 @@
 
 \begin{frame}{Military Service $\&$ Education}
 \begin{center}
-  \scalebox{0.1}{\includegraphics{../Military_Wage/Graphs/School}}
+  \scalebox{0.1}{\includegraphics{fig/School}}
 \end{center}
 \end{frame}
 
@@ -200,13 +214,15 @@
 \item Surprisingly, those who Never Served had a lower median income overall than those who were retired from service.
 \item[]
 \item Doubtful if there is a statistical difference as the IQR overlap for all categories.
+\item[]
+\item DC seems like an outlier for both Retired and Recent Retired groups: government jobs?
 \end{enumerate}
 \end{frame}
 
 
 \begin{frame}{Military Service $\&$ Salary}
 \begin{center}
-  \scalebox{0.1}{\includegraphics{../Military_Wage/Graphs/Wages}}
+  \scalebox{0.1}{\includegraphics{fig/Wages}}
 \end{center}
 \end{frame}
 
@@ -229,14 +245,14 @@
 
 \begin{frame}{Military Service $\&$ Insurance}
 \begin{center}
-  \scalebox{0.65}{\includegraphics{../Insurance/Graphs/insurance_sbsmap}}
+  \scalebox{0.65}{\includegraphics{fig/insurance_sbsmap}}
 \end{center}
 \end{frame}
 
 
 \begin{frame}{Military Service $\&$ Insurance}
 \begin{center}
-  \scalebox{0.62}{\includegraphics{../Insurance/Graphs/insurance_oddsmap}}
+  \scalebox{0.62}{\includegraphics{fig/insurance_oddsmap}}
 \end{center}
 \end{frame}
 
@@ -248,19 +264,30 @@
 
 \begin{frame}
 \frametitle{1. Zero Wages}
-
+\begin{itemize}
+\item Oregon alone: $44\%$ of observations in "wages"
+\item Similar pattern for all other States
+\item Narrowed down to individuals who were earning a wage
+\item Trimmed all zeroes
+\end{itemize}
 \end{frame}
 
 
 \begin{frame}
 \frametitle{2. Ordering of Multiple Categories}
-
+\begin{itemize}
+\item Point charts do not seem to order observations based on just one category when multiple ones are present.
+\end{itemize}
 \end{frame}
 
 
 \begin{frame}
 \frametitle{3. Odds Ratio}
-
+\begin{itemize}
+\item Multiple categories of Military Service status and Insurance
+\item Combined Military Service into Served/Not Served
+\item Combined Insurance into Have/Not Have
+\end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -272,24 +299,44 @@
 \subsection{}
 
 \begin{frame}
-\frametitle{}
-\begin{enumerate}
+\frametitle{Future Work}
+\begin{itemize}
 \item Further breakdown of income based on its source
-\begin{enumerate}
+\begin{itemize}
 \item How many individuals have other sources of income that contribute more than a Salary?
+\item[]
 \item Is there a difference in these levels between prior-service and no-service individuals?
-\end{enumerate}
-
-\item Consider time out of service
-
-\item Education: Proportion of people receiving higher education the same based on prior military service?
-
-\item Further breakdown of insurance based on its types
-\end{enumerate}
+\end{itemize}
+\end{itemize}
 \end{frame}
 
 
 
+\begin{frame}
+\frametitle{Future Work}
+\begin{itemize}
+\item Consider time out of service
+\begin{itemize}
+\item Variable "VPS": Veteran period of service. What's the last war you served during?
+\item[]
+\item Investigate education level for different levels of VPS
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Future Work}
+\begin{itemize}
+\item Education: \textbf{Proportion} of people receiving higher education the same based on prior military service?
+\item[]
+\item Further breakdown of insurance based on its sources
+\begin{itemize}
+\item Seven sources of health insurance
+\end{itemize}
+\end{itemize}
+\end{frame}
 
 
 
