@@ -1,6 +1,6 @@
 \documentclass{article}
 
-
+\title{\vspace{-2.0cm}Stuff}
 \title{ST 599 Project 1 Report}
 \author{Wanli Zhang \& Matt Edwards}
 \date{21st April 2014}
@@ -10,11 +10,15 @@
 \usepackage{fourier} % uses Adobe font, comment to use latex default font
 
 \begin{document}
-\maketitle %% ==== We may want to do this by hand, to give more room in the rest of the document ====
+%\maketitle %% ==== We may want to do this by hand, to give more room in the rest of the document ====
 \SweaveOpts{concordance=TRUE}
 
-
-
+\begingroup  
+  \centering
+  \LARGE ST 599 Project 1 Report\\[1em]
+  \large Wanli Zhang \& Matt Edwards\par
+\endgroup
+% uses 2nd answer from here: http://tex.stackexchange.com/questions/29593/shift-title-and-author-text-up
 
 \section{Background $\&$ Questions of Interest}
 Our group used the 5-year PUMS data of all states from the American Community Survey, and tackled three questions of interest:
@@ -52,7 +56,7 @@ Surprisingly, those who Never Served had a lower median income overall than thos
 \end{figure}
 
 
-\pagebreak
+%\pagebreak
 
 
 \subsection{Insurance}
