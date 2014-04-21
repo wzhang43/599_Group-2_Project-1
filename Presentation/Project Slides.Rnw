@@ -1,0 +1,297 @@
+\documentclass[serif,mathserif]{beamer}
+
+\mode<presentation>
+{
+\usetheme{Frankfurt}
+\setbeamercovered{transparent}
+}
+
+
+%\usepackage{beamerarticle}
+\usepackage{amssymb}
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\usepackage{amsfonts,amsmath, amsthm, amssymb, latexsym, epsfig}
+
+\usepackage[all]{xy}
+\input xy
+\xyoption{all}
+\usepackage{xspace}
+
+\usepackage[mathscr]{eucal}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multicol}
+%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{xcolor}
+
+
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{question}{Question}
+
+\title % (optional, use only with long paper titles)
+{ST 599 Project 1}
+%\subtitle{}
+
+\author[] % (optional, use only with lots of authors)
+{Wanli Zhang $\&$ Matt Edwards}
+%{Chiaochih Chang \\ Dr. Ferry Butar Butar}
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[] % (optional, but mostly needed)
+{Oregon State University}
+  %\and
+  %\inst{2}%
+  %Department of Statistics \\
+  %Piedmont College
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date{April 23rd, 2014} % (optional, should be abbreviation of conference name)
+%{North Georgia College and State University\\ }
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\beamerdefaultoverlayspecification{<+->}
+
+\newtheorem{myDef}{Definition}
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+
+% Structuring a talk is a difficult task and the following structure
+% may not be suitable. Here are some rules that apply for this
+% solution:
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+% - A conference audience is likely to know very little of what you
+%   are going to talk about. So *simplify*!
+% - In a 20min talk, getting the main ideas across is hard
+%   enough. Leave out details, even if it means being less precise than
+%   you think necessary.
+% - If you omit details that are vital to the proof/implementation,
+%   just say so once. Everybody will be happy with that.
+
+
+
+
+
+
+%\begin{frame}{Outline}
+%\begin{center}
+%\begin{multicols}{2}
+
+%\begin{enumerate}
+%\item Introduction
+%\vfill
+%\item[]
+%\vfill
+%\item Method
+%\vfill
+%\begin{itemize}
+%\item Simulation
+%\vfill
+%\item Efficiency Assessment
+%\vfill
+%\end{itemize}
+%\item Results & Discussion
+%\vfill
+%\item[]
+%\vfill
+%\item Future Work
+%\end{enumerate}
+
+%\end{multicols}
+%\end{center}
+%\end{frame}
+
+\section{Introduction}
+\subsection{}
+
+
+\begin{frame}{Background}
+\begin{itemize}
+\item[]Data used for this project are the 5-year Public Use Microdata Samples (PUMS) for each State as well as the District of Columbia and Puerto Rico. Only the population records were considered.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Questions of Interest}
+\begin{enumerate}
+\item Does prior military service affect, positively or negatively, the maximum amount of \textbf{schooling} received by an individual?
+\item Does prior military service affect the \textbf{salary level} of an individual
+\item Does prior military service affect whether or not the individual has \textbf{health insurance coverage}?
+\end{enumerate}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Results}
+\subsection{}
+
+
+\begin{frame}{Military Service $\&$ Education}
+\begin{enumerate}
+\item Military service does not seem to play a significant role.
+\item[]
+\item Median education level is 18 (College, Non-Degree) for most state/service level combinations.
+\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}{Military Service $\&$ Education}
+\begin{center}
+  \scalebox{0.1}{\includegraphics{../Military_Wage/Graphs/School}}
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{Military Service $\&$ Salary}
+\begin{enumerate}
+\item Surprisingly, those who Never Served had a lower median income overall than those who were retired from service.
+\item[]
+\item Doubtful if there is a statistical difference as the IQR overlap for all categories.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Military Service $\&$ Salary}
+\begin{center}
+  \scalebox{0.1}{\includegraphics{../Military_Wage/Graphs/Wages}}
+\end{center}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Military Service $\&$ Insurance}
+\begin{enumerate}
+\item Overall, health insurance coverage is greater for those who have served or are on active duty.
+\item[]
+\item For those who have served, coverage is highest in Massachusetts ($98.5\%$) and lowest in Arizona ($93.2\%$).
+\item[]
+\item For those who haven't served, coverage is highest in Massachusetts ($95.9\%$) and lowest in Texas ($75.7\%$).
+\item[]
+\item Odds ratio is greatest in California (5.3) and smallest in South Dakota (2.3).
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Military Service $\&$ Insurance}
+\begin{center}
+  \scalebox{0.65}{\includegraphics{../Insurance/Graphs/insurance_sbsmap}}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Military Service $\&$ Insurance}
+\begin{center}
+  \scalebox{0.62}{\includegraphics{../Insurance/Graphs/insurance_oddsmap}}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Obstacles $\&$ Solutions}
+\subsection{}
+
+\begin{frame}
+\frametitle{1. Zero Wages}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{2. Ordering of Multiple Categories}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{3. Odds Ratio}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\section{Future Work}
+\subsection{}
+
+\begin{frame}
+\frametitle{}
+\begin{enumerate}
+\item Further breakdown of income based on its source
+\begin{enumerate}
+\item How many individuals have other sources of income that contribute more than a Salary?
+\item Is there a difference in these levels between prior-service and no-service individuals?
+\end{enumerate}
+
+\item Consider time out of service
+
+\item Education: Proportion of people receiving higher education the same based on prior military service?
+
+\item Further breakdown of insurance based on its types
+\end{enumerate}
+\end{frame}
+
+
+
+
+
+
+
+\end{document}
