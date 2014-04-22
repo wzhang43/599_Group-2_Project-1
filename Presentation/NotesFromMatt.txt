@@ -8,9 +8,11 @@ Note: I think I technically used the 3-year PUMS data, not the 5-year, so we sho
 
 
 Question:
-  Was there something that specifically interested you about health insurance?
+  Was there something that specifically interested you about health insurance? - not really
 
   I had other questions an hour ago, and of course right now, I can't think of them.
 
   Is there any information you need from me in order to be able to present?
 
+
+Insurance - There were multiple categories of insurance (HINS*) if any of them said yes, then they were counted as a "yes"

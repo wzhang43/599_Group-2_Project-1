@@ -1,0 +1,37 @@
+\documentclass{article}
+
+\title{Minutes from Apr 21}
+\author{Matt \& Wanli}
+\date{21st April 2014}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\maketitle
+
+\section{Current Status}
+\subsection{Written Report}
+4/20 - Report completed, all results \& future work for all topics - Matt \& Wanli
+
+4/21 - Submitted both via e-mail and in hard copy - Matt
+
+\subsection{Slides}
+4/20 Slides are started. 4/21 Discussed at start of class. Clarified topics including:
+\begin{itemize}
+\item Heavy \# of 0's in Wage Data
+\item Ordering of values with multiple categories (see Wage graph)
+\item Future work: Service Period, Insurance source categories
+\end{itemize}
+
+\subsection{Upcoming Tasks}
+
+\begin{itemize}
+  \item Both Wanli \& Matt feel confident they will be able to present all parts by Weds.
+  \item If issues arrive, we'll respond via e-mail as promptly as possible. (Matt notes that he normally stops checking e-mail after 9pm.)
+  \item Matt will e-mail Link to Alix & Charlotte by 4/23 AM at the latest.
+\end{itemize}
+
+
+
+
+\end{document}
